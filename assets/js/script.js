@@ -13,8 +13,8 @@ function taskFormHandler() {
 
     //package data into object
     var taskDataObj = {
-        name: taskNameInput,
-        type: taskTypeInput
+        name: taskNameInput.value,
+        type: taskTypeInput.value
     };
     formEl.reset();
 
@@ -31,7 +31,7 @@ function createTaskEl(taskDataObj){
     // give it a classs name
     taskInfoEl.className = "task-info";
     // add HTML content to div
-    taskInfoEl.innerHTML = "<h3 class='task-name'>" + taskDataObj.name.value + "</h3> <span class='task-type'>" + taskDataObj.type.value + "</span>";
+    taskInfoEl.innerHTML = "<h3 class='task-name'>" + taskDataObj.name + "</h3> <span class='task-type'>" + taskDataObj.type + "</span>";
 
     listItemEl.appendChild(taskInfoEl);
 
